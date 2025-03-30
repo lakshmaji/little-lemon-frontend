@@ -1,0 +1,14 @@
+ul {
+  display: flex;
+  list-style-type: none;
+  gap: 2;
+}
+
+.nav-item {
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 0.5em 1.2em;
+  text-transform: capitalize;
+}

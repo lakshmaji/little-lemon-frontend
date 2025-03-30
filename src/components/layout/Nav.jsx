@@ -38,7 +38,7 @@ const links = [
 const Nav = () => {
   return (
     <nav>
-      <ul>
+      <ul className="nav-items">
         {links.map((link) => {
           return (
             <li key={link.id}>

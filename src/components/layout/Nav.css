@@ -1,4 +1,4 @@
-ul {
+.nav-items {
   display: flex;
   list-style-type: none;
   gap: 2;

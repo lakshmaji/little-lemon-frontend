@@ -11,6 +11,16 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --Font-Primary: "Markazi Text", serif;
+  --Font-Secondary: "Karla", sans-serif;
+  --Color-Primary: #495e57;
+  --Color-Primary-Light: #f4ce14;
+  --Color-Secondary: #ee9972;
+  --Color-Secondary-Light: #fbdabb;
+  --Color-Highlight: #333;
+  --Color-Highlight-Light: #edefee;
+  --Hero-Back: linear-gradient(0deg, #fff 13%, #495e57 0);
 }
 
 *,

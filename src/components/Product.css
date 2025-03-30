@@ -1,0 +1,23 @@
+article img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0px 0px;
+}
+
+article {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+article:hover {
+  transform: scale(1.05);
+}
+
+article > .content {
+  padding: 15px;
+}

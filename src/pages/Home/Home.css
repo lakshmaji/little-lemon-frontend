@@ -1,0 +1,98 @@
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  height: 500px;
+  margin: 2em 0px;
+}
+
+.banner-img {
+  height: auto;
+  max-width: 100%;
+}
+
+.banner-img-wrapper {
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-end;
+  max-height: 393px;
+  max-width: 374px;
+  overflow: hidden;
+}
+
+.hero-section {
+  background: var(--Hero-Back);
+}
+.hero {
+  display: flex;
+  padding: 4em 0;
+}
+
+.hero > div:nth-child(1) {
+  flex: 2;
+}
+.hero > div:nth-child(2) {
+  flex: 1;
+}
+
+.product-list {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.image-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+
+  width: 420px;
+  height: 300px;
+}
+
+.mario {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Second image - positioned on top with a 3D effect */
+.adrian {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotateY(20deg) translate3d(135px, 135px, 35px);
+  transition: transform 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.about > .content {
+  padding: 2em;
+}
+
+.about-title {
+  font-family: var(--Font-Primary);
+  font-size: 70px;
+  font-weight: 500;
+  line-height: 2em;
+}
+.about-subtitle {
+  font-size: 32px;
+  line-height: 1.5em;
+}
+
+.about-text {
+  word-wrap: break-word;
+  color: var(--Color-Primary);
+  font-family: var(--Font-Secondary);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 125%;
+  padding-right: 13rem;
+}

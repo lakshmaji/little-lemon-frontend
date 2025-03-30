@@ -6,7 +6,7 @@ const ExternalRedirectBtn = ({ url, children }) => {
   };
 
   return (
-    <button onClick={handleRedirect}>
+    <button onClick={handleRedirect} className="footer-btn">
       {children || "Go to External Website"}
     </button>
   );

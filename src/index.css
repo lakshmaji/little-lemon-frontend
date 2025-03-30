@@ -82,3 +82,22 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+section {
+  margin: 0 auto;
+}
+
+button {
+  background: var(--Color-Primary-Light);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: var(--Font-Secondary);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  outline: none;
+  padding: 0.5em 1em;
+  transition: all 0.2s ease-in-out;
+  height: 50px;
+}

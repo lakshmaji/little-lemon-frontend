@@ -1,0 +1,42 @@
+.booking-confirmation__title {
+  text-align: center;
+}
+
+.booking-confirmation__title h1 {
+  font-size: 2rem;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.booking-confirmation__title h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.booking-confirmation__details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+
+.booking-confirmation__details div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-confirmation__details span {
+  font-size: 1rem;
+}
+
+.booking-confirmation__details .label {
+  font-weight: bold;
+  color: #555;
+}
+
+.booking-confirmation__details .value {
+  color: #333;
+}

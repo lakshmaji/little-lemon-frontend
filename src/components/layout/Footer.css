@@ -6,10 +6,6 @@ footer {
   align-items: center;
 }
 
-footer button {
-  background-color: transparent;
-}
-
 footer .footer-links {
   display: flex;
   flex-direction: column;
@@ -42,7 +38,7 @@ footer h3 {
 }
 
 footer .label,
-button {
+.footer-btn {
   font-weight: 500;
   line-height: 20px;
   font-family: var(--Font-Secondary);
@@ -52,10 +48,13 @@ button {
   outline: none;
 }
 
-footer button {
+.footer-btn {
   padding: 0.5em 0;
+  background-color: transparent;
+  width: auto;
+  height: auto;
 }
-footer button:hover {
+.footer-btn:hover {
   color: var(--Color-Primary-Light);
   outline: none;
   border-color: transparent;

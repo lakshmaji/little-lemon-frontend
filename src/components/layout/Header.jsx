@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import lemonLogo from "./../../assets/Logo.svg";
 import Nav from "./Nav";
 import "./Header.css";
+import iconHamburger from "../../assets/icon-hamburger-menu.svg";
 
 const Header = () => {
+  const [showMobileNav, setShowMobileNav] = useState(false);
+  const toggleNavMenu = () => setShowMobileNav(!showMobileNav);
+  const closeMenu = () => setShowMobileNav(false);
   return (
     <header>
       <img src={lemonLogo} alt="Little Lemon" />
-      <Nav />
+      <Nav showMobileNav={showMobileNav} closeMenu={closeMenu} />
+      <button className="header__hamburger" onClick={toggleNavMenu}>
+        <img src={iconHamburger} width={30} height={30} alt="hamburger" />
+      </button>
     </header>
   );
 };

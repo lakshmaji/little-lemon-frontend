@@ -36,7 +36,7 @@ const links = [
   },
 ];
 
-const Nav = () => {
+const Nav = ({ showMobileNav, closeMenu }) => {
   const handleSmoothScroll = (e, targetId) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
@@ -49,8 +49,11 @@ const Nav = () => {
   };
 
   return (
-    <nav>
-      <ul className="nav-items">
+    <nav
+      className={`${showMobileNav ? "mobile-on" : "mobile-off"}`}
+      onClick={closeMenu}
+    >
+      <ul className="nav__items">
         {links.map((link) => {
           if (link.scrollTo) {
             return (
@@ -58,7 +61,7 @@ const Nav = () => {
                 <a
                   href={link.scrollTo}
                   onClick={(e) => handleSmoothScroll(e, link.scrollTo)}
-                  className="nav-item"
+                  className="nav__item"
                 >
                   {link.label}
                 </a>
@@ -69,7 +72,7 @@ const Nav = () => {
             <li key={link.id}>
               <NavLink
                 to={link.to}
-                className={`nav-item ${({ isActive }) =>
+                className={`nav__item ${({ isActive }) =>
                   isActive ? "active" : ""}`}
               >
                 {link.label}

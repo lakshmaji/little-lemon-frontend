@@ -35,7 +35,7 @@ const SOCIAL_LINKS = [
 
 const FooterLinks = ({ links }) => {
   return (
-    <ul className="footer-links">
+    <ul className="footer__links">
       {links.map((link) => (
         <ExternalRedirectBtn url={link.to} key={link.id}>
           {link.label}
@@ -48,13 +48,13 @@ const FooterLinks = ({ links }) => {
 const Footer = () => {
   return (
     <footer>
-      <div className="img-wrapper">
+      <div className="footer__img-wrapper">
         <img src={lemonLogo} alt="Little Lemon" width={300} />
       </div>
-      <div className="info">
+      <div className="footer__info">
         <div>
           <h3>Reach out to us </h3>
-          <address className="label">
+          <address className="footer__label">
             Little Lemon
             <br />
             Box 564, Disneyland

@@ -41,3 +41,13 @@
   width: 30px;
   height: 30px;
 }
+
+.product__snap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.product__description {
+  text-align: left;
+}

@@ -76,13 +76,12 @@
 
 /* Second image - positioned on top with a 3D effect */
 .adrian {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: rotateY(20deg) translate3d(135px, 135px, 35px);
+  transform: rotateY(20deg) translate3d(135px, -175px, 35px);
   transition: transform 0.3s ease-in-out;
   border-radius: 8px;
 }
@@ -119,6 +118,38 @@
   align-items: center;
 }
 
+@media screen and (max-width: 1024px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 1em;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 10em;
+  }
+  .about > .content {
+    padding: 0;
+  }
+  .about-title {
+    line-height: 1em;
+    text-align: center;
+  }
+  .about-subtitle {
+    padding: 0.2em 0 1em 0;
+    text-align: center;
+  }
+  .about-text {
+    padding-right: 0;
+  }
+  .image-container {
+    width: 500px;
+    height: 300px;
+  }
+
+  .adrian {
+    transform: rotateY(20deg) translate3d(6em, -14em, 1em);
+  }
+}
+
 @media screen and (max-width: 500px) {
   .hero {
     flex-direction: column;
@@ -135,8 +166,7 @@
   .about {
     grid-template-columns: 1fr;
     gap: 1em;
-    margin-bottom: 4em;
-    min-height: 100vh;
+    margin-bottom: 10em;
   }
   .about > .content {
     padding: 0;
@@ -158,7 +188,7 @@
   }
 
   .adrian {
-    transform: rotateY(20deg) translate3d(16px, 126px, 35px);
+    transform: rotateY(20deg) translate3d(1em, -10em, 3em);
   }
 
   .menu-wrapper {
@@ -173,38 +203,5 @@
   .product-list {
     grid-template-columns: 1fr;
     padding: 20px 0;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .about {
-    grid-template-columns: 1fr;
-    gap: 1em;
-    margin-bottom: 4em;
-    min-height: 50vh;
-    align-items: center;
-    justify-items: center;
-  }
-  .about > .content {
-    padding: 0;
-  }
-  .about-title {
-    line-height: 1em;
-    text-align: center;
-  }
-  .about-subtitle {
-    padding: 0.2em 0 1em 0;
-    text-align: center;
-  }
-  .about-text {
-    padding-right: 0;
-  }
-  .image-container {
-    width: 300px;
-    height: 200px;
-  }
-
-  .adrian {
-    transform: rotateY(20deg) translate3d(16px, 126px, 35px);
   }
 }

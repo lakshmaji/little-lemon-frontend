@@ -8,11 +8,11 @@ const Product = ({ img, label, price, description }) => {
     <article className="product">
       <img className="product__img" src={img} alt={label} />
       <div className="content">
-        <div>
-          <h4>{label}</h4>
+        <div className="product__snap">
+          <h3>{label}</h3>
           <span>${toTwoDecimals(price)}</span>
         </div>
-        <p>{description}</p>
+        <p className="product__description">{description}</p>
         <div className="product__wrapper">
           <p className="product__info">Order a delivery</p>
           <img

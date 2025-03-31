@@ -204,4 +204,7 @@
     grid-template-columns: 1fr;
     padding: 20px 0;
   }
+  .banner-img {
+    width: 100%;
+  }
 }

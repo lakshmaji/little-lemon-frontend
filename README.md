@@ -1,4 +1,26 @@
-# React + Vite
+# Little Lemons Frontend capstone
+
+Node.js v20.11.0
+npm 10.2.4
+Vite
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Screenshots
+
+![web](./.assets/web.png)
+<br />
+![mobile](./.assets/mobile.png)
+<br />
+![ipad](./.assets/ipad.png)
+
+
+## Template notes
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

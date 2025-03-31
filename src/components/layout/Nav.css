@@ -21,7 +21,7 @@
 .mobile-off {
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 810px) {
   .mobile-off {
     display: none;
   }
@@ -33,6 +33,7 @@
     position: absolute;
     top: 10%;
     left: 0;
+    z-index: 10;
   }
 
   .mobile-on > .nav__items {

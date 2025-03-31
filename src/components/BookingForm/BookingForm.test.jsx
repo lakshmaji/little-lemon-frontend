@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from "react-router";
 vi.mock("react-router", async () => {
   const rr = await vi.importActual("react-router");
 
-  return { ...rr, useNavigate: vi.fn() };
+  return { ...rr, useNavigate: vi.fn(() => vi.fn()) };
 });
 
 describe("BookingForm", () => {

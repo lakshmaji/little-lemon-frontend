@@ -28,7 +28,6 @@ const BookingForm = ({ submitAPI }) => {
     }),
     onSubmit: (values) => {
       const response = submitAPI(values);
-      console.log(values);
       if (response) {
         localStorage.setItem("Bookings", JSON.stringify(values));
         navigate("/confirmation");

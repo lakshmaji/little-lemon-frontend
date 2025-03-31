@@ -87,7 +87,7 @@ const Home = () => {
         </Container>
       </section>
       <Testimonials />
-      <section>
+      <section id="about">
         <Container>
           <div className="about">
             <div className="content">

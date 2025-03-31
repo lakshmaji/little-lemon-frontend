@@ -11,7 +11,8 @@ const links = [
   {
     id: 2,
     label: "About",
-    to: "/about",
+    to: "#about",
+    scrollTo: "about",
   },
   {
     id: 3,
@@ -45,14 +46,18 @@ const Nav = ({ showMobileNav, closeMenu }) => {
         behavior: "smooth",
         block: "start",
       });
+      closeMenu();
+    }
+  };
+
+  const onKeyDown = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      closeMenu();
     }
   };
 
   return (
-    <nav
-      className={`${showMobileNav ? "mobile-on" : "mobile-off"}`}
-      onClick={closeMenu}
-    >
+    <nav className={`${showMobileNav ? "mobile-on" : "mobile-off"}`}>
       <ul className="nav__items">
         {links.map((link) => {
           if (link.scrollTo) {
@@ -62,6 +67,7 @@ const Nav = ({ showMobileNav, closeMenu }) => {
                   href={link.scrollTo}
                   onClick={(e) => handleSmoothScroll(e, link.scrollTo)}
                   className="nav__item"
+                  onKeyDown={onKeyDown}
                 >
                   {link.label}
                 </a>
@@ -74,6 +80,8 @@ const Nav = ({ showMobileNav, closeMenu }) => {
                 to={link.to}
                 className={`nav__item ${({ isActive }) =>
                   isActive ? "active" : ""}`}
+                onClick={closeMenu}
+                onKeyDown={onKeyDown}
               >
                 {link.label}
               </NavLink>

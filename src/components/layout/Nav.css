@@ -38,6 +38,7 @@
   .mobile-on > .nav__items {
     flex-direction: column;
     align-items: center;
+    padding-top: 2em;
   }
 
   .nav__item {

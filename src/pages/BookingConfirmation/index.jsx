@@ -24,21 +24,27 @@ const BookingConfirmation = () => {
           <div className="booking-confirmation__details">
             <div>
               <span className="label">Date</span>
-              <span className="value">{booking.date}</span>
+              <span className="value" data-testid="date">
+                {booking.date}
+              </span>
             </div>
             <div>
               <span className="label">Time</span>
-              <span className="value">
+              <span className="value" data-testid="time">
                 {convertTo12HourFormat(booking.time)}
               </span>
             </div>
             <div>
               <span className="label">No of Guests</span>
-              <span className="value">{booking.guests}</span>
+              <span className="value" data-testid="guests">
+                {booking.guests}
+              </span>
             </div>
             <div>
               <span className="label">Occasion</span>
-              <span className="value">{booking.occasion}</span>
+              <span className="value" data-testid="occasion">
+                {booking.occasion}
+              </span>
             </div>
           </div>
         </Container>

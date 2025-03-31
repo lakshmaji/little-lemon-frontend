@@ -1,7 +1,7 @@
 import MainLayout from "../../components/layout/MainLayout";
 import "./Home.css";
 import restauranfood from "../../assets/restauranfood.jpg";
-import bruchetta from "../../assets/bruchetta.svg";
+import bruchetta from "../../assets/bruchetta.png";
 import lemonDessert from "../../assets/lemon-dessert.jpg";
 import greekSalad from "../../assets/greek-salad.jpg";
 import Product from "../../components/Product";

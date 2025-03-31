@@ -1,11 +1,11 @@
-article img {
+.product img {
   height: 300px;
   width: 100%;
   object-fit: cover;
   border-radius: 8px 8px 0px 0px;
 }
 
-article {
+.product {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -14,10 +14,10 @@ article {
   transition: transform 0.3s ease;
 }
 
-article:hover {
+.product:hover {
   transform: scale(1.05);
 }
 
-article > .content {
+.product > .content {
   padding: 15px;
 }

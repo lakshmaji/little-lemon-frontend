@@ -20,6 +20,7 @@
   --Color-Secondary-Light: #fbdabb;
   --Color-Highlight: #333;
   --Color-Highlight-Light: #edefee;
+  --Color-Success: #4caf50;
   --Hero-Back: linear-gradient(0deg, #fff 13%, #495e57 0);
 }
 
@@ -51,19 +52,8 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
 button:hover {
-  border-color: #646cff;
+  background-color: var(--Color-Secondary);
 }
 button:focus,
 button:focus-visible {

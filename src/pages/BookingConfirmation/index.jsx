@@ -1,32 +1,44 @@
+import React, { useState, useEffect } from "react";
 import MainLayout from "../../components/layout/MainLayout";
 import Container from "../../components/ui/Container";
 import "./BookingConfirmation.css";
+import { convertTo12HourFormat } from "../../utils";
 
 const BookingConfirmation = () => {
+  const [booking, setBooking] = useState({});
+
+  useEffect(() => {
+    const booking = localStorage.getItem("Bookings");
+    if (booking) {
+      setBooking(JSON.parse(booking));
+    }
+  }, []);
   return (
     <MainLayout>
-      <section>
+      <section className="booking-confirmation">
         <Container>
           <div className="booking-confirmation__title">
             <h1>Your reservation is confirmed!</h1>
-            <h2>Little Lemon Restaurant</h2>
+            <h2>We look forward to seeing you at Little Lemon.</h2>
           </div>
           <div className="booking-confirmation__details">
             <div>
-              <span className="label">DATE</span>
-              <span className="value">2025-03-20</span>
+              <span className="label">Date</span>
+              <span className="value">{booking.date}</span>
             </div>
             <div>
-              <span className="label">TIME</span>
-              <span className="value">21:00</span>
+              <span className="label">Time</span>
+              <span className="value">
+                {convertTo12HourFormat(booking.time)}
+              </span>
             </div>
             <div>
               <span className="label">No of Guests</span>
-              <span className="value">2</span>
+              <span className="value">{booking.guests}</span>
             </div>
             <div>
-              <span className="label">OCCASION</span>
-              <span className="value">Birthday</span>
+              <span className="label">Occasion</span>
+              <span className="value">{booking.occasion}</span>
             </div>
           </div>
         </Container>

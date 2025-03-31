@@ -28,13 +28,28 @@
   padding: 4em 0;
 }
 
+.title {
+  line-height: 1.5em;
+  color: var(--Color-Primary-Light) !important;
+}
+.hero-description {
+  line-height: 1.5em;
+  max-width: 500px;
+  padding: 2em 0;
+  color: var(--Color-Highlight-Light);
+}
+
 .hero > div:nth-child(1) {
   flex: 2;
 }
 .hero > div:nth-child(2) {
   flex: 1;
+  transform: translate(10px, 30px);
 }
 
+.menu-title {
+  line-height: 2em;
+}
 .product-list {
   display: grid;
   gap: 20px;
@@ -95,4 +110,11 @@
   font-weight: 500;
   line-height: 125%;
   padding-right: 13rem;
+}
+
+.menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 4em 0px 0px 0px;
+  align-items: center;
 }

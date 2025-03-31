@@ -8,6 +8,8 @@ import Product from "../../components/Product";
 import Container from "../../components/ui/Container";
 import marioAndAdrian from "../../assets/mario-and-adrian.jpg";
 import marioAndAdrianB from "../../assets/mario-and-adrian-b.jpg";
+import { NavLink } from "react-router";
+import Testimonials from "../../components/Testimonials";
 
 const PRODUCTS = [
   {
@@ -43,13 +45,15 @@ const Home = () => {
         <Container>
           <div className="hero">
             <div>
-              <h1>Little Lemon</h1>
+              <h1 className="title">Little Lemon</h1>
               <p>Chicago</p>
-              <p>
+              <p className="hero-description">
                 We are a family owned Mediterranean restaurant, focused on
                 traditional recipes served with a modern twist.
               </p>
-              <button>Reserve a Table</button>
+              <NavLink to="/bookings">
+                <button>Reserve a Table</button>
+              </NavLink>
             </div>
             <div className="banner-img-wrapper">
               <img
@@ -61,11 +65,11 @@ const Home = () => {
           </div>
         </Container>
       </section>
-      <section>
+      <section id="menu">
         <Container>
-          <div>
-            <h1>This weeks specials</h1>
-            <button>Online Menu</button>
+          <div className="menu-wrapper">
+            <h1 className="menu-title">This weeks specials</h1>
+            <button className="menu-btn">Online Menu</button>
           </div>
         </Container>
         <Container>
@@ -82,6 +86,7 @@ const Home = () => {
           </div>
         </Container>
       </section>
+      <Testimonials />
       <section>
         <Container>
           <div className="about">

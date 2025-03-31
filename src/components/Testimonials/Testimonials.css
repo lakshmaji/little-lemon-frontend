@@ -1,0 +1,29 @@
+.testimonials {
+  text-align: center;
+  padding: 2rem;
+  background: var(--Hero-Back);
+}
+
+.testimonial-list {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 4em;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rating {
+  color: gold;
+  font-size: 1.2rem;
+}
+
+.testimonial-title {
+  line-height: 1.5em;
+  color: var(--Color-Primary-Light) !important;
+}

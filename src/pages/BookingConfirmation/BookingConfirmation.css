@@ -1,17 +1,19 @@
+.booking-confirmation {
+  padding: 6em;
+}
 .booking-confirmation__title {
   text-align: center;
 }
 
 .booking-confirmation__title h1 {
   font-size: 2rem;
-  color: #4caf50;
+  color: var(--Color-Success);
   margin-bottom: 10px;
 }
 
 .booking-confirmation__title h2 {
   font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 30px;
+  margin-bottom: 3em;
 }
 
 .booking-confirmation__details {
@@ -35,6 +37,7 @@
 .booking-confirmation__details .label {
   font-weight: bold;
   color: #555;
+  text-transform: capitalize;
 }
 
 .booking-confirmation__details .value {

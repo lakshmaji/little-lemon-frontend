@@ -16,7 +16,8 @@ const links = [
   {
     id: 3,
     label: "Menu",
-    to: "/menu",
+    to: "#menu",
+    scrollTo: "menu",
   },
   {
     id: 4,
@@ -36,10 +37,34 @@ const links = [
 ];
 
 const Nav = () => {
+  const handleSmoothScroll = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <nav>
       <ul className="nav-items">
         {links.map((link) => {
+          if (link.scrollTo) {
+            return (
+              <li key={link.id}>
+                <a
+                  href={link.scrollTo}
+                  onClick={(e) => handleSmoothScroll(e, link.scrollTo)}
+                  className="nav-item"
+                >
+                  {link.label}
+                </a>
+              </li>
+            );
+          }
           return (
             <li key={link.id}>
               <NavLink

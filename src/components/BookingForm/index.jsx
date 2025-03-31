@@ -2,10 +2,9 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./BookingForm.css";
-import { submitAPI } from "../../utils";
 import { useNavigate } from "react-router";
 
-const BookingForm = () => {
+const BookingForm = ({ submitAPI }) => {
   const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
@@ -29,6 +28,7 @@ const BookingForm = () => {
     }),
     onSubmit: (values) => {
       const response = submitAPI(values);
+      console.log(values);
       if (response) {
         localStorage.setItem("Bookings", JSON.stringify(values));
         navigate("/confirmation");

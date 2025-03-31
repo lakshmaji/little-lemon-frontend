@@ -1,4 +1,4 @@
-.product img {
+.product > .product__img {
   height: 300px;
   width: 100%;
   object-fit: cover;
@@ -20,4 +20,24 @@
 
 .product > .content {
   padding: 15px;
+}
+
+.product__wrapper {
+  padding-top: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product__info {
+  font-family: var(--Font-Secondary);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  padding-right: 0.5rem;
+}
+
+.product__cart_img {
+  width: 30px;
+  height: 30px;
 }

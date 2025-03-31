@@ -54,3 +54,7 @@ export const initializeTimes = () => {
   const today = new Date();
   return { times: fetchAPI(today) };
 };
+
+export const toTwoDecimals = (number) => {
+  return parseFloat(number).toFixed(2);
+};
